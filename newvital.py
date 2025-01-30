@@ -149,7 +149,8 @@ def main():
 
         print("Page: " + '1' + ' of ' + str(len(RomanBookList) ))
         for page in range(2, len(RomanBookList), 2):
-                pyautogui.hotkey('ctrl', 'p', interval = 0.25)
+                time.sleep(3)
+                #pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 pyautogui.press('tab', 1, interval = 0.25)
                 pyautogui.press('delete', 6, interval = 0.25)
                 pyautogui.typewrite(RomanBookList[page], interval = 0.25)
@@ -235,8 +236,9 @@ def main():
 
     def NumberProcess(start):
         for page in range(start, len(NumberList), 2):
-                
-                pyautogui.hotkey('ctrl', 'p', interval = 0.25)
+
+                time.sleep(3)
+                #pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 pyautogui.press('tab', 1, interval = 0.25)
                 pyautogui.press('delete', 6, interval = 0.25)
                 pyautogui.typewrite(NumberList[page], interval = 0.25)
