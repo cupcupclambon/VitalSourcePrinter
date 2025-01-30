@@ -145,12 +145,12 @@ def main():
         pyautogui.typewrite("Ebook", interval = 0.50)
         time.sleep(2)
         pyautogui.press('enter', interval = 0.5)
-        time.sleep(0.25)
+        time.sleep(2)
 
         print("Page: " + '1' + ' of ' + str(len(RomanBookList) ))
         for page in range(2, len(RomanBookList), 2):
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
-                pyautogui.press('tab', 2, interval = 0.25)
+                pyautogui.press('tab', 1, interval = 0.25)
                 pyautogui.press('delete', 6, interval = 0.25)
                 pyautogui.typewrite(RomanBookList[page], interval = 0.25)
                 pyautogui.press('tab', interval = 0.25)
@@ -237,7 +237,7 @@ def main():
         for page in range(start, len(NumberList), 2):
                 
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
-                pyautogui.press('tab', 2, interval = 0.25)
+                pyautogui.press('tab', 1, interval = 0.25)
                 pyautogui.press('delete', 6, interval = 0.25)
                 pyautogui.typewrite(NumberList[page], interval = 0.25)
                 pyautogui.press('tab', interval = 0.25)
