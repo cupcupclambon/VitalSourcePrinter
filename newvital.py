@@ -154,7 +154,7 @@ def main():
                 
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 time.sleep(3)
-                pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+                #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 time.sleep(3)
                 pyautogui.press('delete', 5)
                 pyautogui.typewrite(RomanBookList[page], interval = 0.25)
