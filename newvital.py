@@ -247,6 +247,7 @@ def main():
                 pyautogui.typewrite(NumberList[page], interval = 0.25)
                 time.sleep(3)
                 pyautogui.press('tab', interval = 0.25)
+                time.sleep(3)
                 pyautogui.press('delete', 6, interval = 0.25)
                 pyautogui.typewrite(NumberList[page+1])
                 time.sleep(3)
