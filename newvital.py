@@ -154,7 +154,7 @@ def main():
                 
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 time.sleep(3)
-                #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+                pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 time.sleep(3)
                 pyautogui.press('delete', 5)
                 pyautogui.typewrite(RomanBookList[page], interval = 0.25)
@@ -245,7 +245,7 @@ def main():
                 pyautogui.press('enter',interval=0.50)
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 time.sleep(3)
-                #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+                pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 pyautogui.press('delete', 5)
                 pyautogui.typewrite(NumberList[page], interval = 0.25)
                 pyautogui.press('tab', interval = 0.25)
