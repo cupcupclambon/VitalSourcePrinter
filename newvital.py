@@ -182,16 +182,16 @@ def main():
                        time.sleep(10) 
               
                 try: #not ideal handling , but it works. A bug that yields OSError(22, 'Invalid argument') should be investigated
-                    pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
+                    pdf1Reader = PyPDF2.PdfReader(pdf1File)
                 except:
                     time.sleep(5)
-                    pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
+                    pdf1Reader = PyPDF2.PdfReader(pdf1File)
 
                 try:
-                    pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
+                    pdf2Reader = PyPDF2.PdfReader(pdf2File)
                 except:
                     time.sleep(5)
-                    pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
+                    pdf2Reader = PyPDF2.PdfReader(pdf2File)
 
 
                 pdfWriter = PyPDF2.PdfFileWriter()
@@ -274,16 +274,16 @@ def main():
                     while (os.path.isfile(filedir + File2.pdf) != True):
                        time.sleep(10) 
                 try: 
-                    pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
+                    pdf1Reader = PyPDF2.PdfReader(pdf1File)
                 except:
                     time.sleep(5)
-                    pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
+                    pdf1Reader = PyPDF2.PdfReader(pdf1File)
 
                 try:
-                    pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
+                    pdf2Reader = PyPDF2.PdfReader(pdf2File)
                 except:
                     time.sleep(5)
-                    pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
+                    pdf2Reader = PyPDF2.PdfReader(pdf2File)
                 
                 pdfWriter = PyPDF2.PdfFileWriter()   
                 for pageNum in range(pdf1Reader.numPages):
