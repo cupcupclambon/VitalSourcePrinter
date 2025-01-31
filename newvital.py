@@ -136,7 +136,7 @@ def main():
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry2)
-        time.sleep(3)
+        time.sleep(4)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
         time.sleep(12)
         pyautogui.press('tab', presses=4, interval=0.25)
