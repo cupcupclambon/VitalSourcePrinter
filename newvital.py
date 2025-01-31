@@ -194,7 +194,7 @@ def main():
                     pdf2Reader = PyPDF2.PdfReader(pdf2File)
 
 
-                pdfWriter = PyPDF2.PdfFileWriter()
+                pdfWriter = PyPDF2.PdfWriter()
                 for pageNum in range(pdf1Reader.numPages):
                     pageObj = pdf1Reader.getPage(pageNum)
                     pdfWriter.addPage(pageObj)
@@ -285,7 +285,7 @@ def main():
                     time.sleep(5)
                     pdf2Reader = PyPDF2.PdfReader(pdf2File)
                 
-                pdfWriter = PyPDF2.PdfFileWriter()   
+                pdfWriter = PyPDF2.PdfWriter()   
                 for pageNum in range(pdf1Reader.numPages):
                     pageObj = pdf1Reader.getPage(pageNum)
                     pdfWriter.addPage(pageObj)
