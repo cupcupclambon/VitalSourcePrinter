@@ -220,7 +220,7 @@ def main():
 
     
         pyautogui.hotkey('ctrl', 'p')
-        #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+        pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
