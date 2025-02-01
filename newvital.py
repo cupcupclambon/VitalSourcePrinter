@@ -196,10 +196,10 @@ def main():
 
                 pdfWriter = PyPDF2.PdfWriter()
                 for pageNum in range(len(pdf1Reader.pages)):
-                    pageObj = pdf1Reader.getPage(pageNum)
+                    pageObj = pdf1Reader.pages[pageNum]
                     pdfWriter.addPage(pageObj)
                 for pageNum in range(len(pdf1Reader.pages)):
-                    pageObj = pdf2Reader.getPage(pageNum)
+                    pageObj = pdf2Reader.pages[pageNum]
                     pdfWriter.addPage(pageObj)
                 pdfOutputFile = open(filedir + 'Ebook1.pdf', 'wb')
                 pdfWriter.write(pdfOutputFile)
@@ -287,10 +287,10 @@ def main():
                 
                 pdfWriter = PyPDF2.PdfWriter()   
                 for pageNum in range(len(pdf1Reader.pages)):
-                    pageObj = pdf1Reader.getPage(pageNum)
+                    pageObj = pdf1Reader.pages[pageNum]
                     pdfWriter.addPage(pageObj)
                 for pageNum in range(len(pdf1Reader.pages)):
-                    pageObj = pdf2Reader.getPage(pageNum)
+                    pageObj = pdf2Reader.pages[pageNum]
                     pdfWriter.addPage(pageObj)
                 pdfOutputFile = open(filedir + 'Ebook1.pdf', 'wb')
                 pdfWriter.write(pdfOutputFile)
