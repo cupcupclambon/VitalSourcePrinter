@@ -224,7 +224,7 @@ def main():
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
-        pyautogui.typewrite(PageEntry2)　
+        pyautogui.typewrite(PageEntry2)
         time.sleep(5)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
         print("Sleeping for 3 seconds...")
