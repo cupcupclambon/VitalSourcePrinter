@@ -1,7 +1,5 @@
-
 '''
 This script is designed to legally and automatically print your purchased e-books from VitalSource.com
-
 See ReadMe at https://github.com/LifeAlgorithm/VitalSourcePrinter and/or watch tutorial video for instructions
 '''
 
@@ -115,7 +113,7 @@ def main():
         if roman_to_int(RomanEnd.upper()):
             if len(RomanBookList)%2 != 0 :  #ugly coding, but it gets the job done
                 RomanBookList += [ RomanBookList[-1] ]
-                
+
     print("\nClick on the active VitalSource window to get started.\nThe program will start in: 8")
     for seconds in range(8):
         time.sleep(1)
@@ -123,12 +121,12 @@ def main():
             print("Starting now...\n")
             break
         print(str(8 - (seconds + 1))) 
-                
+
     if not (RomanStart == 'No' or RomanStart == 'no'):  
 
         PageEntry1 = RomanBookList[0]
         PageEntry2 = RomanBookList[1]
-                            
+
         #pyautogui.hotkey('ctrl', 'p')
         pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
@@ -151,7 +149,7 @@ def main():
         for page in range(2, len(RomanBookList), 2):
                 time.sleep(3)
                 pyautogui.press('enter',interval=0.50)
-                
+
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 #pyautogui.press('delete', 5)
@@ -180,7 +178,7 @@ def main():
                        time.sleep(10)
                     while (os.path.isfile(filedir + File2.pdf) != True):
                        time.sleep(10) 
-              
+
                 try: #not ideal handling , but it works. A bug that yields OSError(22, 'Invalid argument') should be investigated
                     pdf1Reader = PyPDF2.PdfReader(pdf1File)
                 except:
@@ -217,9 +215,10 @@ def main():
         PageEntry1 = NumberList[0]
         PageEntry2 = NumberList[1]
 
-    
+
         pyautogui.hotkey('ctrl', 'p')
         pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+        #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
@@ -227,9 +226,7 @@ def main():
         pyautogui.typewrite(PageEntry2)
         time.sleep(5)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
-        print("Sleeping for 3 seconds...")
         time.sleep(20)
-        print("Resuming execution")
         pyautogui.press('tab', presses=4, interval=0.25)
         pyautogui.press('enter',interval=0.50)
         time.sleep(2)   
@@ -262,7 +259,7 @@ def main():
                 pyautogui.typewrite("File2", interval = 0.5)
                 time.sleep(2)
                 pyautogui.press('enter', interval = 0.5)
-                
+
                 time.sleep(5)
                 while (os.path.isfile(filedir + "Ebook.pdf") != True):
                        time.sleep(2)
@@ -287,7 +284,7 @@ def main():
                 except:
                     time.sleep(5)
                     pdf2Reader = PyPDF2.PdfReader(pdf2File)
-                
+
                 pdfWriter = PyPDF2.PdfWriter()   
                 for pageNum in range(len(pdf1Reader.pages)):
                     pageObj = pdf1Reader.pages[pageNum]
@@ -306,7 +303,7 @@ def main():
                 except:
                     time.sleep(10)
                     os.remove(filedir + 'Ebook.pdf')
-                    
+
                 try:
                     os.remove(filedir + 'File2.pdf')
                 except:
@@ -318,14 +315,14 @@ def main():
                 except:
                     time.sleep(10)
                     os.rename(filedir + 'Ebook1.pdf', filedir + 'Ebook.pdf')
-           
+
                 print("Page: " + str(page + 2) + ' of ' + str(len(NumberList) ))           
 
     if not (RomanStart == 'No' or RomanStart == 'no'):
         NumberProcess(0)
     else:
         NumberProcess(2)
-        
+
     elapsed_time = time.time() - start_time
     print("\nDone!")
     print("This took " + "%.2f" % (elapsed_time/3600) + " hours.")
@@ -335,8 +332,5 @@ if __name__ == "__main__": main()
 
 ''' 
 Final note
-
 I hope this script serves you well. A lot of the actual code was written for basic functionality and not neccessarily optimization 
 and readability. Suggestions for refactoring and improvement are always appreciated.
-
-'''
