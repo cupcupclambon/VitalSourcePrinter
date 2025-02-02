@@ -1,3 +1,4 @@
+
 '''
 This script is designed to legally and automatically print your purchased e-books from VitalSource.com
 See ReadMe at https://github.com/LifeAlgorithm/VitalSourcePrinter and/or watch tutorial video for instructions
@@ -127,7 +128,7 @@ def main():
         PageEntry1 = RomanBookList[0]
         PageEntry2 = RomanBookList[1]
 
-        #pyautogui.hotkey('ctrl', 'p')
+        pyautogui.hotkey('ctrl', 'p')
         pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry1)
@@ -195,11 +196,12 @@ def main():
                 pdfWriter = PyPDF2.PdfWriter()
                 for pageNum in range(len(pdf1Reader.pages)):
                     pageObj = pdf1Reader.pages[pageNum]
+                    pdfWriter.addPage(pageObj)
                     pdfWriter.add_page(pageObj)
-                for pageNum in range(min(len(pdf1Reader.pages), len(pdf2Reader.pages))):  
-                    pageObj = pdf2Reader.pages[pageNum]  
+                for pageNum in range(len(pdf1Reader.pages)):
+                    pageObj = pdf2Reader.pages[pageNum]
+                    pdfWriter.addPage(pageObj)
                     pdfWriter.add_page(pageObj)
-
                 pdfOutputFile = open(filedir + 'Ebook1.pdf', 'wb')
                 pdfWriter.write(pdfOutputFile)
                 pdfOutputFile.close()
@@ -218,15 +220,14 @@ def main():
 
         pyautogui.hotkey('ctrl', 'p')
         pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
-        #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry2)
-        time.sleep(5)
+        time.sleep(3)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
-        time.sleep(20)
+        time.sleep(12)
         pyautogui.press('tab', presses=4, interval=0.25)
         pyautogui.press('enter',interval=0.50)
         time.sleep(2)   
@@ -288,11 +289,12 @@ def main():
                 pdfWriter = PyPDF2.PdfWriter()   
                 for pageNum in range(len(pdf1Reader.pages)):
                     pageObj = pdf1Reader.pages[pageNum]
+                    pdfWriter.addPage(pageObj)
                     pdfWriter.add_page(pageObj)
-                for pageNum in range(min(len(pdf1Reader.pages), len(pdf2Reader.pages))):  
-                    pageObj = pdf2Reader.pages[pageNum]  
+                for pageNum in range(len(pdf1Reader.pages)):
+                    pageObj = pdf2Reader.pages[pageNum]
+                    pdfWriter.addPage(pageObj)
                     pdfWriter.add_page(pageObj)
-
                 pdfOutputFile = open(filedir + 'Ebook1.pdf', 'wb')
                 pdfWriter.write(pdfOutputFile)
                 pdfOutputFile.close()
@@ -334,3 +336,4 @@ if __name__ == "__main__": main()
 Final note
 I hope this script serves you well. A lot of the actual code was written for basic functionality and not neccessarily optimization 
 and readability. Suggestions for refactoring and improvement are always appreciated.
+'''
