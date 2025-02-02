@@ -219,15 +219,17 @@ def main():
 
     
         pyautogui.hotkey('ctrl', 'p')
-        #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
+        pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
-        pyautogui.typewrite(PageEntry2)
+        pyautogui.typewrite(PageEntry2)　
         time.sleep(5)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
+        print("Sleeping for 3 seconds...")
         time.sleep(20)
+        print("Resuming execution")
         pyautogui.press('tab', presses=4, interval=0.25)
         pyautogui.press('enter',interval=0.50)
         time.sleep(2)   
