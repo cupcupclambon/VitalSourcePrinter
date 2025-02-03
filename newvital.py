@@ -245,9 +245,7 @@ def main():
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 pyautogui.press('delete', 5)
-                pyautogui.typewrite(str(NumberList[page]), interval=0.2)  # intervalを0.2秒に
-                time.sleep(5)  # 入力後に少し待機
-
+                pyautogui.typewrite(NumberList[page], interval = 0.25)
                 time.sleep(3)
                 pyautogui.press('tab', interval = 0.25)
                 time.sleep(3)
@@ -255,7 +253,9 @@ def main():
                 pyautogui.typewrite(NumberList[page+1])
                 time.sleep(3)
                 pyautogui.typewrite(['tab', 'enter'], interval = 0.75)
+                print("Sleeping for 18 seconds...")  # デバッグ用
                 time.sleep(18)
+                print("Woke up from sleep")
                 pyautogui.press('tab', presses=4, interval=0.25)
                 pyautogui.press('enter',interval=0.50)
                 time.sleep(2)   
