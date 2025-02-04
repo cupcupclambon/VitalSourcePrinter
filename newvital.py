@@ -214,17 +214,25 @@ def main():
         print("\nRoman Numerals Done\n")
 
     else:
-        PageEntry1 = NumberList[0]
-        PageEntry2 = NumberList[1]
+        #PageEntry1 = NumberList[0]
+        #PageEntry2 = NumberList[1]
+        PageEntry1 = str(NumberList[0])  # 文字列に変換
+        PageEntry2 = str(NumberList[1])  # 文字列に変換
 
     
         pyautogui.hotkey('ctrl', 'p')
         pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
         pyautogui.press('delete', 5)
-        pyautogui.typewrite(PageEntry1)
+        
+        #pyautogui.typewrite(PageEntry1)
+        pyautogui.typewrite(PageEntry1, interval=0.1)  # 文字列として入力
+
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
-        pyautogui.typewrite(PageEntry2)
+        
+        pyautogui.typewrite(PageEntry2, interval=0.1)  # 文字列として入力
+        #pyautogui.typewrite(PageEntry2)
+        
         time.sleep(5)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
         print("Sleeping for 18 seconds...")  # デバッグ用
