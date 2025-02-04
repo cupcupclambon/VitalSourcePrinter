@@ -225,12 +225,12 @@ def main():
         pyautogui.press('delete', 5)
         
         #pyautogui.typewrite(PageEntry1)
-        pyautogui.typewrite(PageEntry1, interval=0.1)  # 文字列として入力
+        pyautogui.typewrite(PageEntry1, interval=1.0)  # 文字列として入力
 
         pyautogui.press('tab')
         pyautogui.press('delete', 5)
         
-        pyautogui.typewrite(PageEntry2, interval=0.1)  # 文字列として入力
+        pyautogui.typewrite(PageEntry2, interval=1.0)  # 文字列として入力
         #pyautogui.typewrite(PageEntry2)
         
         time.sleep(5)
