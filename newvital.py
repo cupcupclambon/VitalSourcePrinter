@@ -234,11 +234,12 @@ def main():
         #pyautogui.typewrite(PageEntry2)
         
         time.sleep(5)
-        pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
+        #pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
         
         time.sleep(5)
         pyautogui.typewrite(['tab', 'enter'], interval = 0.25 )
         print("Woke up from sleep")
+        time.sleep(10)
         time.sleep(20)
         pyautogui.press('tab', presses=4, interval=0.25)
         pyautogui.press('enter',interval=0.50)
