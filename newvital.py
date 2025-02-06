@@ -257,6 +257,8 @@ def main():
                 pyautogui.press('enter',interval=0.50)
                 time.sleep(3)
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
+                time.sleep(1)
+                pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 pyautogui.press('delete', 5)
                 pyautogui.typewrite(NumberList[page], interval = 0.25)
