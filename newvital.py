@@ -253,8 +253,9 @@ def main():
     def NumberProcess(start):
         for page in range(start, len(NumberList), 2):
 
-                time.sleep(3)
+                time.sleep(5)
                 pyautogui.press('enter',interval=0.50)
+                time.sleep(3)
                 pyautogui.hotkey('ctrl', 'p', interval = 0.25)
                 #pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
                 pyautogui.press('delete', 5)
