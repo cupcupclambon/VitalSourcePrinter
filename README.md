@@ -1,4 +1,4 @@
-# VitalSourcePrinter
+# VitalSourcePrinter(改造版2025年)
 Code to legally and automatically print your purchased e-books from VitalSource.com
 
 This program automates the printing of PDF's from the VitalSource Bookshelf. The VitalSource Bookshelf usually only lets the user print 2 pages at a time, and manually doing this for the entire book is tedious and time consuming. This program automatically prints any selection or the entirety of an e-book, page by page, and rapidly concatenates everything into a single PDF file. As this program makes use of keyboard automation, this process assumes that the user is away from the computer for the duration of the process, though the user at any time can stop the script from continuing. 
